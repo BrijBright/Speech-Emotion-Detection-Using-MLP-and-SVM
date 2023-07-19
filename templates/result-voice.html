@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Result - Voice</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #f7f7f7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    .container {
+      margin: 2rem;
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <h1>Voice Emotion Recognition</h1>
+    <a href="{{ url_for('home') }}">Home</a>
+  </div>
+
+  <div class="container">
+    <h1>Voice Prediction Results</h1>
+
+    <p>Result MLP Classfier: {{ result_rf }}</p>
+    <p>Result SVM: {{ result_svm }}</p>
+
+    <p>{{ message }}</p>
+  </div>
+
+  <footer>
+    <p>BrijKishor Gupta</p>
+  </footer>
+
+</body>
+
+</html>
